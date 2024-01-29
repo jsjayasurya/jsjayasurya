@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://w0.peakpx.com/wallpaper/212/622/HD-wallpaper-the-poop-is-here-i-was-bored.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .survey-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .result-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Poop Survey</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                document.getElementById("survey-container").style.opacity = "1";
+            }, 500);
+        });
+
+        function showResultImage() {
+            // Hide the survey form
+            document.getElementById("survey-form").style.display = "none";
+
+            // Show the result image
+            document.getElementById("result-image").classList.remove("hidden");
+        }
+    </script>
+</head>
+<body>
+
+    <div class="survey-container" id="survey-container" style="opacity: 1;">
+        <h1>Poop Survey</h1>
+
+        <p>Welcome to the Poop Survey! Please answer the following questions:</p>
+
+        <form id="survey-form" onsubmit="showResultImage(); return false;">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required="">
+
+            <br>
+
+            <label for="gender">Your Gender:</label>
+            <select id="gender" name="gender" required="">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="agender">Agender</option>
+                <option value="androgyne">Androgyne</option>
+                <option value="bigender">Bigender</option>
+                <option value="cisgender">Cisgender</option>
+                <option value="demiboy">Demiboy</option>
+                <option value="demigirl">Demigirl</option>
+                <option value="genderfluid">Genderfluid</option>
+                <option value="genderqueer">Genderqueer</option>
+                <option value="non-binary">Non-Binary</option>
+                <option value="pangender">Pangender</option>
+                <option value="transgender">Transgender</option>
+                <option value="two-spirit">Two-Spirit</option>
+                <option value="male-curious">Male, Curious About Being Female</option>
+                <option value="female-curious">Female, Curious About Being Male</option>
+                <option value="male-overweight">Male, Overweight With Boobs</option>
+                <option value="female-adams-apple">Female, Has an Adam's Apple</option>
+                <option value="herm-male-leaning">Hermaphrodite, Predominant Male Leanings</option>
+                <option value="herm-female-leaning">Hermaphrodite, Predominant Female Leanings</option>
+                <option value="herm-no-leanings">Hermaphrodite, No Strong Gender Leanings</option>
+                <option value="conjoined-twin-male">Conjoined Twin - Male</option>
+                <option value="conjoined-twin-female">Conjoined Twin - Female</option>
+                <option value="no-genitals-male">Born Without Genitals - Identify as Male</option>
+                <option value="no-genitals-female">Born Without Genitals - Identify as Female</option>
+                <option value="no-genitals-proud">Born Without Genitals - Proud of It</option>
+                <option value="bad-circumcision-male">Born a Male, Bad Circumcision, Raised Female</option>
+                <option value="ai-no-gender">Sentient Artificial Intelligence With No Gender</option>
+                <option value="ai-male">Sentient Artificial Intelligence - Identifies as Male</option>
+                <option value="ai-female">Sentient Artificial Intelligence - Identifies as Female</option>
+                <option value="pet-male">Household Pet - Male</option>
+                <option value="pet-female">Household Pet - Female</option>
+                <option value="pet-other">Household Pet - Other</option>
+                <option value="attack-helicopter">Attack Helicopter</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <br>
+
+            <label for="poop-frequency">How often do you poop?</label>
+            <input type="text" id="poop-frequency" name="poop-frequency" required="">
+
+            <br>
+
+            <label for="poop-consistency">Describe the consistency of your poop:</label>
+            <select id="poop-consistency" name="poop-consistency" required="">
+                <option value="solid">Solid Poop</option>
+                <option value="semi-solid">Semi-Solid Poop</option>
+                <option value="liquid">Liquid Poop</option>
+                <option value="gas">Just Gas</option>
+            </select>
+
+            <br>
+
+            <label for="poop-color">Describe the color of your poop:</label>
+            <select id="poop-color" name="poop-color" required="">
+                <option value="betroot-red">Betroot Red</option>
+                <option value="curd-rice-white">Curd Rice White</option>
+                <option value="sambar-yellow">Sambar Yellow</option>
+                <option value="biriyani-brown">Biriyani Brown</option>
+                <option value="universal-black">Universal Black</option>
+            </select>
+
+            <br>
+
+            <label for="poop-sound">Describe the sound of your pooping:</label>
+            <select id="poop-sound" name="poop-sound" required="">
+                <option value="peaceful">Peaceful (No sound)</option>
+                <option value="bullet-bike">Bullet Bike Sound</option>
+                <option value="semi-gear">Semi Gear Sound</option>
+                <option value="vikram-bgm">Vikram BGM Sound</option>
+                <option value="fire-alarm">Fire Alarm Sound</option>
+            </select>
+
+            <br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Result Image -->
+        <img id="result-image" class="hidden result-image" src="https://www.creativefabrica.com/wp-content/uploads/2021/12/27/Collection-of-cute-poop-mascot-design-Graphics-22381496-3-580x386.jpg" alt="Result Image">
+    </div>
+
+</body>
+</html>
